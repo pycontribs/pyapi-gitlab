@@ -194,8 +194,7 @@ class Gitlab(object):
         if request.status_code == 200:
             return request.json()
         else:
-
-            return False
+            return []
 
     def getsshkey(self, key_id):
         """Get a single ssh key identified by key_id
@@ -1561,7 +1560,7 @@ class Gitlab(object):
         if request.status_code == 200:
             return request.json()
         else:
-            return False
+            return []
 
     def addgroupmember(self, group_id, user_id, access_level):
         """Adds a project member to a project
